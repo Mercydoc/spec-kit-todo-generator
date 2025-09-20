@@ -13,17 +13,20 @@ This VS Code extension generates a folder and ToDo file structure for Spec-Drive
 ### From GitHub Repository
 
 1. Clone this repository:
+
    ```bash
-   git clone https://github.com/yourusername/spec-kit-todo-generator.git
+   git clone https://github.com/Mercydoc/spec-kit-todo-generator.git
    cd spec-kit-todo-generator
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Package the extension (optional):
+
    ```bash
    npm install -g vsce
    vsce package
@@ -46,13 +49,16 @@ Search for "Spec Kit ToDo Generator" in the VS Code Extensions marketplace.
 3. All folders and ToDo files will be created automatically
 
 ## Customization
+
 - Edit the template functions in `extension.js` to change ToDo content.
 - Add more ToDo categories or folders as needed.
 
 ## Requirements
+
 - VS Code 1.60.0 or higher
 
 ## Development
+
 - Run `npm install` to install dependencies.
 - Package with `vsce package` if needed.
 
