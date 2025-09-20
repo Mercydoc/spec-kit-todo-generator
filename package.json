@@ -1,16 +1,54 @@
 {
   "name": "spec-kit-todo-generator",
+  "displayName": "Spec Kit ToDo Generator",
+  "description": "Generate ToDo files for Spec-Driven Development",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "publisher": "Mercydoc",
+  "engines": {
+    "vscode": "^1.60.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@types/vscode": "^1.104.0",
-    "vscode": "^1.1.34"
-  }
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:spec-kit.createTodoFiles"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "spec-kit.createTodoFiles",
+        "title": "Create Spec Kit ToDo Structure"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "spec-kit.createTodoFiles",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "echo 'No compile step needed'"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mercydoc/spec-kit-todo-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mercydoc/spec-kit-todo-generator/issues"
+  },
+  "homepage": "https://github.com/Mercydoc/spec-kit-todo-generator#readme",
+  "keywords": [
+    "todo",
+    "spec-driven",
+    "development",
+    "project-structure",
+    "markdown"
+  ],
+  "license": "MIT"
 }
